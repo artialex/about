@@ -28,7 +28,7 @@ const App = () => (
     <p className="ml-8">
       ...which means that I'm not limited to JavaScript/Frontend knowledge. At different times of my career I set up
       E2E-tests, helped designers and developers to work together and speak the same language & communicated closely
-      with backend devs answering the question "how we work with common data?" through REST apis and GraphQL. I like the
+      with backend devs answering the question "how we manage our data layer?" through REST apis and GraphQL. I like the
       companies where I could do backend tasks as well.
     </p>
 
