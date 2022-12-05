@@ -1,7 +1,7 @@
 const App = () => (
   <div className="m-6 text-slate-100 max-w-[600px]">
     <p className="mt-10 text-lg">Hello, I'm</p>
-    <h1 className="text-4xl font-bold mb-4">Alexey Selivanov</h1>
+    <h1 className="text-4xl font-bold mb-4">Arti Alex</h1>
     <p className="text-lg">
       I write Frontend since 2014, using modern tech:{' '}
       <a target="_blank" rel="noreferer noopener" href="https://reactjs.org">
@@ -10,7 +10,7 @@ const App = () => (
       ,{' '}
       <a target="_blank" rel="noreferer noopener" href="https://redux-toolkit.js.org">
         Redux
-      </a>{' '}
+      </a>
       ,{' '}
       <a target="_blank" rel="noreferer noopener" href="https://nextjs.org">
         Next.js
