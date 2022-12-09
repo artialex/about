@@ -112,40 +112,41 @@ const App = () => {
       </ul>
 
       <ul className="space-y-10 pt-6 print:!pl-0 sm:pl-7">
-        {jobs.map((_) => (
-          <li key={_.title}>
+        {jobs.map((job) => (
+          <li key={job.title}>
             <h3 className="text-xl">
-              <a href={_.link} target="_blank" rel="noreferer noopener">
-                {_.title}
+              <a href={job.link} target="_blank" rel="noreferer noopener">
+                {job.title}
               </a>
-              <small className="text-sm text-gray-400"> {_.years}</small>
+              <small className="text-sm text-gray-400"> {job.years}</small>
             </h3>
-            <p className="text-sm text-gray-400">{_.subtitle}</p>
-            <p className="mt-1">{_.description}</p>
+            <p className="text-sm text-gray-400">{job.subtitle}</p>
+            <p className="mt-1">{job.description}</p>
             <ul className="my-2 text-sm sm:list-disc">
-              {_.duties?.map((_) => (
-                <li>{_}</li>
+              {job.duties?.map((duty) => (
+                <li key={duty}>{duty}</li>
               ))}
             </ul>
 
-            {_.technologies?.length && (
+            {job.technologies?.length && (
               <div className="flex items-baseline gap-2">
                 <p className="flex-none text-sm text-gray-400">
                   Technologies used:
                 </p>
                 <p>
-                  {_.technologies?.map((_, ind) => (
+                  {job.technologies?.map((tech, ind) => (
                     <span
+                      key={tech.title}
                       className={
-                        _.level === TechnologyLevel.Strong
+                        tech.level === TechnologyLevel.Strong
                           ? 'text-white'
-                          : _.level === TechnologyLevel.Medium
+                          : tech.level === TechnologyLevel.Medium
                           ? 'text-sm text-gray-400'
                           : 'text-xs text-gray-600'
                       }
                     >
                       {ind !== 0 ? ', ' : ''}
-                      {_.title}
+                      {tech.title}
                     </span>
                   ))}
                 </p>
