@@ -146,7 +146,7 @@ export const jobs: Job[] = [
     position: 'Tech Lead JavaScript Developer',
     title: 'Stream',
     subtitle:
-      'Child company of MTS, one og three biggest Russian telecom companies',
+      'Child company of MTS, one of the biggest Russian telecom companies',
     link: 'https://stream.ru',
     logo: 'stream.svg',
     years: '2019 — 2020',
