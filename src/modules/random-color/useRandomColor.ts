@@ -10,18 +10,11 @@ const colors = [
   'hotpink',
   'palevioletred',
   'orange',
-  'khaki',
-  'lemonchiffon',
-  'lavender',
-  'lime',
   'yellowgreen',
   'mediumaquamarine',
   'turquoise',
   'lightskyblue',
-  'bisque',
   'sandybrown',
-  'azure',
-  'gainsboro',
 ];
 
 const KEY = 'AA_current-color';

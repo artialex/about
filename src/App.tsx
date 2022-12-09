@@ -118,9 +118,9 @@ const App = () => {
               <a href={job.link} target="_blank" rel="noreferer noopener">
                 {job.title}
               </a>
-              <small className="text-sm text-gray-400"> {job.years}</small>
+              <small className="text-sm text-gray-500"> {job.years}</small>
             </h3>
-            <p className="text-sm text-gray-400">{job.subtitle}</p>
+            <p className="text-sm text-gray-500">{job.subtitle}</p>
             <p className="mt-1">{job.description}</p>
             <ul className="my-2 text-sm sm:list-disc">
               {job.duties?.map((duty) => (
@@ -130,7 +130,7 @@ const App = () => {
 
             {job.technologies?.length && (
               <div className="flex items-baseline gap-2">
-                <p className="flex-none text-sm text-gray-400">
+                <p className="flex-none text-sm text-gray-500">
                   Technologies used:
                 </p>
                 <p>
@@ -139,10 +139,10 @@ const App = () => {
                       key={tech.title}
                       className={
                         tech.level === TechnologyLevel.Strong
-                          ? 'text-white'
+                          ? ''
                           : tech.level === TechnologyLevel.Medium
-                          ? 'text-sm text-gray-400'
-                          : 'text-xs text-gray-600'
+                          ? 'text-sm '
+                          : 'text-xs '
                       }
                     >
                       {ind !== 0 ? ', ' : ''}
