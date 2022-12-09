@@ -35,6 +35,7 @@ const App = () => {
         <li className="flex gap-2 ">
           <MapPin className="random-color w-5 print:hidden" /> Yerevan, Armenia
         </li>
+        {/* 
         <li className="hidden print:inline">•</li>
         <li className="flex items-center gap-2">
           <span className="hidden print:inline">
@@ -42,10 +43,11 @@ const App = () => {
           </span>
           <Globe className="random-color w-5 print:hidden" />
           <span className="print:hidden">Russian, English (B)</span>
-        </li>
+        </li> 
+        */}
       </ul>
 
-      <ul className="mb-2 flex flex-col gap-4 sm:flex-row">
+      <ul className="mb-2 flex flex-col gap-2 sm:flex-row sm:gap-4">
         <li>
           <a className="flex gap-2 " href="mailto:work.catsonis@gmail.com">
             <Mail className="random-color w-5 print:hidden" />
