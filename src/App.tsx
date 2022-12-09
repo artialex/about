@@ -75,11 +75,13 @@ const App = () => {
             <GitHub className="random-color w-5 print:hidden" /> artialex
           </a>
         </li>
+        {/* 
         <li className="print:hidden">
           <a className="flex gap-2 " href="//dribbble.com/artialex">
             <Dribbble className="random-color w-5 print:hidden" /> artialex
           </a>
-        </li>
+        </li> 
+        */}
       </ul>
 
       <p className="print:hidden">
