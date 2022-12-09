@@ -1,97 +1,157 @@
-const App = () => (
-  <div className="m-6 text-slate-100 max-w-[600px]">
-    <p className="mt-10 text-lg">Hello, I'm</p>
-    <h1 className="text-4xl font-bold mb-4">Arti Alex</h1>
-    <p className="text-lg">
-      I write Frontend since 2014, using modern tech:{' '}
-      <a target="_blank" rel="noreferer noopener" href="https://reactjs.org">
-        React
-      </a>
-      ,{' '}
-      <a target="_blank" rel="noreferer noopener" href="https://redux-toolkit.js.org">
-        Redux
-      </a>
-      ,{' '}
-      <a target="_blank" rel="noreferer noopener" href="https://nextjs.org">
-        Next.js
-      </a>
-      ,{' '}
-      <a target="_blank" rel="noreferer noopener" href="https://nextjs.org">
-        Tailwind
-      </a>{' '}
-      and other fancy libs...
-    </p>
-    <p className="text-lg">
-      I consider myself a <em>T-shaped developer...</em>
-    </p>
+import {
+  User,
+  MapPin,
+  Terminal,
+  Download,
+  Linkedin,
+  GitHub,
+  Dribbble,
+  Globe,
+  Mail,
+  Send,
+} from 'react-feather';
+import { jobs, TechnologyLevel } from './modules/jobs';
+import { useRandomColor } from './modules/random-color/useRandomColor';
 
-    <p className="ml-8">
-      ...which means that I'm not limited to JavaScript/Frontend knowledge. At different times of my career I set up
-      E2E-tests, helped designers and developers to work together and speak the same language & communicated closely
-      with backend devs answering the question "how we manage our data layer?" through REST apis and GraphQL. I like the
-      companies where I could do backend tasks as well.
-    </p>
+const App = () => {
+  useRandomColor();
 
-    <p className="text-lg">
-      I also believe that I am a <em>product-driven person...</em>
-    </p>
+  return (
+    <div className="my-8 mx-4 sm:mx-8 md:container">
+      <h1 className="mb-2 flex gap-2">
+        <User className="random-color w-5 print:hidden" />
+        <span className="inline print:hidden">Arti Alex</span>
+        <span className="hidden print:inline print:text-2xl">
+          Alexey Selivanov
+        </span>
+      </h1>
 
-    <p className="ml-8">
-      ...which means that I prefer when before writing code we somehow agree upon which analytics we should gather
-      (product/marketing metrics) and we have the tools to see how our application behaves in general (technical
-      metrics). Otherwise it's just a blind guess and I sometimes found myself in the teams that produce features
-      without any analytical feedback. If there are separate analytics in the company I believe that the communication
-      between them and developers is really important.
-    </p>
+      <h2 className="mb-2 flex gap-2 print:mb-0">
+        <Terminal className="random-color w-5 print:hidden" />
+        Senior Front-end developer
+      </h2>
 
-    <p className="text-lg">
-      I use <em>modern tools</em> to make the life of a developer easier...
-    </p>
+      <ul className="mb-2 flex flex-col gap-4 print:mb-0 sm:flex-row">
+        <li className="flex gap-2 ">
+          <MapPin className="random-color w-5 print:hidden" /> Yerevan, Armenia
+        </li>
+        <li className="hidden print:inline">•</li>
+        <li className="flex items-center gap-2">
+          <span className="hidden print:inline">
+            Languages: Russian (Native), English (B1-B2)
+          </span>
+          <Globe className="random-color w-5 print:hidden" />
+          <span className="print:hidden">Russian, English (B)</span>
+        </li>
+      </ul>
 
-    <p className="ml-8">
-      ...like linters (eslint), autoformatters (prettier), testing libs (RTL, playwright), module-based
-      design/architecture
-    </p>
+      <ul className="mb-2 flex flex-col gap-4 sm:flex-row">
+        <li>
+          <a className="flex gap-2 " href="mailto:work.catsonis@gmail.com">
+            <Mail className="random-color w-5 print:hidden" />
+            work.catsonis@gmail.com
+          </a>
+        </li>
+        <li className="hidden print:inline">•</li>
+        <li className="flex gap-2 ">
+          <Send className="random-color w-5 print:hidden" />
+          <span className="hidden print:inline">Telegram: </span>
+          arti_alex
+        </li>
+        <li className="hidden print:inline">•</li>
+        <li>
+          <a
+            className="flex gap-2 print:hidden"
+            href="//www.linkedin.com/in/artialex/"
+          >
+            <Linkedin className="random-color w-5  " /> artialex
+          </a>
+          <span className="hidden print:inline">linkedin.com/in/artialex</span>
+        </li>
+        <li className="print:hidden">
+          <a className="flex gap-2 " href="//github.com/artialex">
+            <GitHub className="random-color w-5 print:hidden" /> artialex
+          </a>
+        </li>
+        <li className="print:hidden">
+          <a className="flex gap-2 " href="//dribbble.com/artialex">
+            <Dribbble className="random-color w-5 print:hidden" /> artialex
+          </a>
+        </li>
+      </ul>
 
-    {/* 
-    <p className="my-2">Here are some of my resources:</p>
-    <ul className="space-y-2">
-      <li>
-        <a href="https://artialex.github.io">My personal stash of notes</a>
-      </li>
-      <li>
-        <a className="flex gap-2 items-center" href="https://artialex.github.io">
-          <span>My Github</span>
-          <svg className="fill-white w-8" viewBox="0 0 128 128">
-            <g fill="">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-              ></path>
-              <path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path>
-            </g>
-          </svg>
+      <p className="print:hidden">
+        <a className="flex gap-2 " href="Alexey_Selivanov.pdf">
+          <Download className="random-color w-5 print:hidden" />
+          <span className="border-b border-[var(--random-color)]">
+            Download PDF
+          </span>
         </a>
-      </li>
-      <li>
-        <a className="flex gap-2 items-center" href="https://artialex.github.io">
-          <svg className="w-8" viewBox="0 0 128 128">
-            <path
-              fill="#0076b2"
-              d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"
-            ></path>
-            <path
-              fill="#fff"
-              d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
-            ></path>
-          </svg>
-          <span>My LinkedIn</span>
-        </a>
-      </li>
-    </ul>
-     */}
-  </div>
-);
+      </p>
+
+      <ul className="mb-8 pt-8 print:!pl-0 sm:list-disc sm:pl-7">
+        <li>
+          I write JavaScript code professionally <em>since 2014.</em>
+        </li>
+        <li>
+          I am a <em>T-shaped developer.</em> I like to build bridges between
+          frontend devs and backend devs, designers, QA specialists & other team
+          members
+        </li>
+        <li>
+          I am a <em>Product-driven person.</em> I like to analyze things and
+          see how various metrics affect the product
+        </li>
+        <li>
+          I use <em>modern toolset</em> to ensure the highest DX possible.
+        </li>
+      </ul>
+
+      <ul className="space-y-10 pt-6 print:!pl-0 sm:pl-7">
+        {jobs.map((_) => (
+          <li key={_.title}>
+            <h3 className="text-xl">
+              <a href={_.link} target="_blank" rel="noreferer noopener">
+                {_.title}
+              </a>
+              <small className="text-sm text-gray-400"> {_.years}</small>
+            </h3>
+            <p className="text-sm text-gray-400">{_.subtitle}</p>
+            <p className="mt-1">{_.description}</p>
+            <ul className="my-2 text-sm sm:list-disc">
+              {_.duties?.map((_) => (
+                <li>{_}</li>
+              ))}
+            </ul>
+
+            {_.technologies?.length && (
+              <div className="flex items-baseline gap-2">
+                <p className="flex-none text-sm text-gray-400">
+                  Technologies used:
+                </p>
+                <p>
+                  {_.technologies?.map((_, ind) => (
+                    <span
+                      className={
+                        _.level === TechnologyLevel.Strong
+                          ? 'text-white'
+                          : _.level === TechnologyLevel.Medium
+                          ? 'text-sm text-gray-400'
+                          : 'text-xs text-gray-600'
+                      }
+                    >
+                      {ind !== 0 ? ', ' : ''}
+                      {_.title}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default App;

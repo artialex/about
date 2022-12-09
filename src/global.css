@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-100;
+  }
+
+  a {
+    @apply transition hover:opacity-75;
+  }
+
+  em {
+    @apply font-bold text-slate-900 px-1 rounded not-italic bg-[var(--random-color)];
+  }
+  /* 
+
+  a[target='_blank'] {
+    @apply text-rose-300;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  em {
+    @apply text-yellow-200 not-italic border-b border-yellow-700;
+  } 
+  
+  */
+}
+
+@layer utilities {
+  .random-color {
+    color: var(--random-color);
+  }
+}
