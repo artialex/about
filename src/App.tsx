@@ -5,12 +5,10 @@ import {
   Download,
   Linkedin,
   GitHub,
-  Dribbble,
-  Globe,
   Mail,
   Send,
 } from 'react-feather';
-import { jobs, TechnologyLevel } from './modules/jobs';
+import { jobs, TechnologyLevel } from './modules/jobs/jobs';
 import { useRandomColor } from './modules/random-color/useRandomColor';
 
 const App = () => {
@@ -35,7 +33,7 @@ const App = () => {
         <li className="flex gap-2 ">
           <MapPin className="random-color w-5 print:hidden" /> Yerevan, Armenia
         </li>
-        {/* 
+        {/*
         <li className="hidden print:inline">•</li>
         <li className="flex items-center gap-2">
           <span className="hidden print:inline">
@@ -43,7 +41,7 @@ const App = () => {
           </span>
           <Globe className="random-color w-5 print:hidden" />
           <span className="print:hidden">Russian, English (B)</span>
-        </li> 
+        </li>
         */}
       </ul>
 
@@ -75,12 +73,12 @@ const App = () => {
             <GitHub className="random-color w-5 print:hidden" /> artialex
           </a>
         </li>
-        {/* 
+        {/*
         <li className="print:hidden">
           <a className="flex gap-2 " href="//dribbble.com/artialex">
             <Dribbble className="random-color w-5 print:hidden" /> artialex
           </a>
-        </li> 
+        </li>
         */}
       </ul>
 

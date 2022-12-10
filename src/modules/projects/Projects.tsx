@@ -28,12 +28,12 @@ export const Projects = () => (
     <ul className="ml-8 flex gap-4">
       <li>
         <a
-          className="flex gap-2 items-center"
+          className="flex items-center gap-2"
           href="https://github.com/artialex"
           target="_blank"
           rel="noreferer noopener"
         >
-          <svg className="fill-white w-6" viewBox="0 0 128 128">
+          <svg className="w-6 fill-white" viewBox="0 0 128 128">
             <g fill="">
               <path
                 fill-rule="evenodd"
@@ -48,7 +48,7 @@ export const Projects = () => (
       </li>
       <li>
         <a
-          className="flex gap-2 items-center"
+          className="flex items-center gap-2"
           href="https://www.linkedin.com/in/artialex/"
           target="_blank"
           rel="noreferer noopener"
@@ -69,7 +69,7 @@ export const Projects = () => (
 
       <li>
         <a
-          className="flex gap-2 items-center"
+          className="flex items-center gap-2"
           href="https://twitter.com/alextheartisan"
           target="_blank"
           rel="noreferer noopener"

@@ -1,4 +1,6 @@
-import { jobs, TechnologyLevel } from '../jobs';
+import { jobs, TechnologyLevel } from '../jobs/jobs';
+
+
 
 export const CV = () => (
   <>
@@ -58,33 +60,9 @@ export const CV = () => (
                 </a>
                 <span className="text-xs text-zinc-500">{_.years}</span>
               </h3>
-              <p className="text-xs">{_.subtitle}</p>
 
-              <p className="text-base">{_.description}</p>
 
-              <ul className="list-disc text-sm mb-4">
-                {_.duties?.map((_) => (
-                  <li>{_}</li>
-                ))}
-              </ul>
 
-              <p className="text-zinc-500 text-sm mb-0">Technologies used: </p>
-              <p>
-                {_.technologies?.map((_, ind) => (
-                  <span
-                    className={
-                      _.level === TechnologyLevel.Strong
-                        ? 'text-base'
-                        : _.level === TechnologyLevel.Medium
-                        ? 'text-sm text-zinc-400'
-                        : 'text-xs text-zinc-500'
-                    }
-                  >
-                    {ind !== 0 ? ', ' : ''}
-                    {_.title}
-                  </span>
-                ))}
-              </p>
             </article>
           </li>
         ))}
