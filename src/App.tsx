@@ -113,7 +113,7 @@ const App = () => {
         {jobs.map((job) => (
           <li key={job.title}>
             <h3 className="text-xl">
-              <a href={job.link} target="_blank" rel="noreferer noopener">
+              <a href={job.link} target="_blank" rel="noreferrer">
                 {job.title}
               </a>
               <small className="text-sm text-gray-500"> {job.years}</small>

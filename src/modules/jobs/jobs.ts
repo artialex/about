@@ -28,7 +28,7 @@ export const jobs: Job[] = [
     subtitle: 'A British startup that works in the field of travel guides',
     link: 'https://road.travel',
     logo: 'road-travel.svg',
-    years: '2022',
+    years: '2022 — 2023',
     description:
       'I worked here as a senior web developer, doing not only frontend tasks but a bit of backend as well',
     duties: [
