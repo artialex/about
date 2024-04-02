@@ -9,7 +9,3 @@ Reminder of how to make changes
 - Run `npm run update`
 
 Made with Vite, React, Tailwind
-
-TODO
-
-- [ ] Add favicon
