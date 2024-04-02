@@ -6,7 +6,7 @@ module.exports = {
       center: true,
       // default breakpoints but with 40px removed
       screens: {
-        DEFAULT: '1200px',
+        DEFAULT: '800px',
       },
     },
     extend: {},
