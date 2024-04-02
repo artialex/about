@@ -6,7 +6,7 @@ export function ShortSummary() {
       </li>
       <li>
         I am a <em>T-shaped developer.</em> I like to build bridges between
-        frontend and backend developerss, designers, QA specialists, and other
+        frontend and backend developers, designers, QA specialists, and other
         team members
       </li>
       <li>
