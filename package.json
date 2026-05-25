@@ -10,7 +10,7 @@
     "update": "npm run build && git add . && git commit -m \"Update\" && git push"
   },
   "dependencies": {
-    "@fontsource/iosevka-etoile": "^5.2.5",
+    "@fontsource-variable/geist-mono": "^5.2.8",
     "@tailwindcss/vite": "^4.3.0",
     "lucide-react": "^1.16.0",
     "react": "^19.2.6",

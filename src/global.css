@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Geist Mono', sans-serif;
+  --font-display: 'Geist Mono Variable', sans-serif;
 
   --container-xl: 900px;
 }
