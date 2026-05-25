@@ -8,4 +8,6 @@ Reminder of how to make changes
 - Regenerate PDF
 - Run `npm run update`
 
-Made with Vite, React, Tailwind
+---
+
+Made with Vite, React, Tailwind, Lucide Icons

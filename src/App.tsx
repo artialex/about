@@ -1,16 +1,15 @@
-import { useRandomColor } from './components/useRandomColor';
-import { PersonalInfo } from './components/PersonalInfo';
-import { ShortSummary } from './components/ShortSummary';
-import { Jobs } from './components/Jobs';
+import { Introduction } from './sections/Introduction';
+import { PersonalInfo } from './sections/PersonalInfo';
+import { PreviousExperience } from './sections/PreviousExperience';
+import { RecentExperience } from './sections/RecentExperience';
 
 export default function App() {
-  useRandomColor();
-
   return (
-    <div className="m-auto flex max-w-[800px] flex-col gap-10 p-4">
+    <div className="font-display m-6 mb-20 space-y-8 print:mx-0 print:font-sans md:mx-12 md:my-8 md:mb-40">
       <PersonalInfo />
-      <ShortSummary />
-      <Jobs />
+      <Introduction />
+      <RecentExperience />
+      <PreviousExperience />
     </div>
   );
 }
