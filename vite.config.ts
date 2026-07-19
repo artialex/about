@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import marked from 'vite-plugin-marked';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   base: '/about/',
-  plugins: [react(), tailwindcss()],
+  plugins: [marked(), tailwindcss()],
 });

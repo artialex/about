@@ -1,43 +1,56 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Geist Mono Variable', sans-serif;
-
-  --container-xl: 900px;
+  --font-display: 'Inter Variable', sans-serif;
+  --font-serif: 'Readex Pro Variable', sans-serif;
 }
 
-@layer utilities {
-  .link {
-    @apply text-sky-500;
+img {
+  @apply mb-4 block rounded-lg;
+}
+
+body {
+  @apply font-display max-w-225 p-10 pb-40;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  @apply mb-4;
+}
+
+a {
+  @apply text-blue-600;
+
+  &[href*='gist'],
+  &[href*='Selivanov'] {
+    @apply text-red-600;
   }
+}
 
-  .inline-list {
-    @apply inline-flex gap-3;
+h1 {
+  @apply text-3xl font-bold;
+}
+h2 {
+  @apply text-2xl font-bold;
+}
+h3 {
+  @apply text-xl font-bold;
+}
 
-    li:not(:last-of-type)::after {
-      @apply pl-3;
-      content: '/';
-    }
-  }
+h1,
+h2,
+h3 {
+  @apply mt-8 font-serif;
+}
 
-  u {
-    text-underline-offset: -2px;
-    text-decoration-thickness: 6px;
-    text-decoration-color: var(--color-gray-200);
-    text-decoration-skip-ink: none;
-  }
+ul {
+  padding-left: 2em;
 
-  p {
-    @apply mb-4;
-  }
-
-  .experience-list {
-    li::marker {
-      content: '- ';
-    }
-  }
-
-  strong {
-    @apply print:font-normal;
+  ::marker {
+    content: '- ';
+    color: gray;
   }
 }

@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
 import './global.css';
+import '@fontsource-variable/inter/wght.css';
+import '@fontsource-variable/readex-pro';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import htmlString from './cv.md';
+
+const el = document.querySelector('body');
+
+if (el) {
+  el.innerHTML = htmlString;
+}
